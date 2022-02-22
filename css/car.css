@@ -1,0 +1,312 @@
+:root{
+    --main-color:#0068EF;
+}
+/* start header */
+header{
+    background: url("../images/aerial-photography-snow-covered-city.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+header .cars{
+    width: 90%;
+    margin:50px auto;
+    gap: 10px;
+    display: flex;
+   justify-content: space-between;   
+}
+@media(max-width:1100px){
+    header .cars{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+header nav .links li a{
+
+    color: #656B83;
+}
+header .cars .box{
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+header .box.large{
+    width: 73%;
+    padding: 20px ;
+    position: relative;
+}
+@media(max-width:1100px){
+    header .box.large{
+        width: 85%;
+        padding: 20px ;
+        position: relative;
+    }
+
+}
+header .box.large h2{
+    font-size: 33px;
+    margin-bottom: 10px;
+}
+header .box.large h4{
+    font-size: 23px;
+    margin: 20px 0;
+    font-weight: normal;
+    color: #777;
+}
+header .box.large input[type="checkbox"],
+header .box.large label{
+    color: var(--main-color);
+    font-weight: bold;
+}
+header .box.large label{
+    margin-right: 30px;
+}
+header .box.large .pos{
+    position: relative;
+}
+header .box.large .grid .g1{
+    grid-area: g1;
+}
+header .box.large .grid .g1 input{
+    width: 99%;
+    padding: 2px 0px 2px 34px;
+    margin: 20px auto 20px ;
+    height: 45px;
+}
+@media (max-width:991px) {
+    header .box.large .grid .g1 input{
+        width: 200px;
+        margin: 0px;
+    }
+}
+@media (max-width:767px) {
+    header .box.large .grid .g1 input{
+        width: 270px;
+    }
+    header{
+        height: 120vh;
+    }
+}
+
+header .box.large .grid .g1 i{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    color: var(--main-color);
+}
+@media (max-width:991px) {
+    header .box.large .grid .g1 i{
+        top: 14px;
+    }
+}
+header .box.large .grid .g2{
+    grid-area: g2;
+}
+header .box.large .grid .g3{
+    grid-area: g3;
+}
+header .box.large .grid .g4{
+    grid-area: g4;
+}
+header .box.large .grid .g5{
+    grid-area: g5;
+}
+header .box.large .grid .g6{
+    grid-area: g6;
+}
+header .box.large .grid .g2 span,
+header .box.large .grid .g3 span,
+header .box.large .grid .g4 span,
+header .box.large .grid .g5 span{
+color: #777;
+font-size: 12px;
+margin-bottom: 5px;
+}
+@media (max-width:991px){
+    header .box.large .grid .g2 span,
+header .box.large .grid .g3 span,
+header .box.large .grid .g4 span,
+header .box.large .grid .g5 span{
+    display: none;
+}
+}
+header .box.large .grid .g2 input,
+header .box.large .grid .g3 input,
+header .box.large .grid .g4 input,
+header .box.large .grid .g5 input{
+    width: 150px;
+    height: 40px;
+}
+@media (max-width:991px){
+    header .box.large .grid .g2 input,
+header .box.large .grid .g3 input,
+header .box.large .grid .g4 input,
+header .box.large .grid .g5 input{
+    width: 200px;
+    height: 40px;
+}
+}
+@media (max-width:676px){
+    header .box.large .grid .g2 input,
+    header .box.large .grid .g3 input,
+    header .box.large .grid .g4 input,
+    header .box.large .grid .g5 input{
+        width: 270px;
+    } 
+}
+
+header .box.large .grid .g6 input{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: bold;
+    margin-top: 18px;
+    border: 1px solid var(--main-color);
+}
+header .box.large .grid .g6 input:hover{
+    background-color: #166bda;
+    cursor: pointer;
+}
+@media (max-width:991px) {
+header .box.large .grid .g6 input{
+width: 200px;
+margin: 0;
+border-width: 2px;
+}
+@media (max-width:676px){
+    header .box.large .grid .g6 input{
+        width: 270px;
+    } 
+}
+}
+header .grid{
+    display: grid;
+    gap: 4px;
+    grid-template-areas: 
+    'g1 g1 g1 g1 g1'
+    'g2 g3 g4 g5 g6';
+    justify-content: center;
+    margin: auto;
+}
+@media (max-width:991px){
+    header .grid{
+        display: grid;
+        gap: 4px;
+        text-align: center;
+        grid-template-areas: 
+        'g1 g1 g1 g2 g2 g2'
+        'g3 g3 g3 g4 g4 g4 '
+        'g5 g5 g5 g6 g6 g6';
+        justify-content: center;
+        margin: 30px;
+    }
+}
+@media (max-width:676px){
+    header .grid{
+        gap: 4px;
+        grid-template-areas: 
+        'g1 g1 g1 '
+        'g2 g2 g2'
+        'g3 g3 g3 '
+        'g4 g4 g4 '
+        'g5 g5 g5'
+        'g6 g6 g6';
+        margin: 20px;
+    }
+}
+
+header .box.small{
+    padding: 20px 10px 20px 20px;
+    height: 240px;
+}
+@media (max-width:1100px){
+    header .box.small{
+        display: none;
+    }
+}
+header .box.small li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    color: #00AA00;
+    padding-right: 6px;
+}
+header .box.small li{
+    margin: 15px 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+form span:last-child{
+    text-align: right;
+    display: block;
+    margin: 20px 0px 60px 0px;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+}
+@media (max-width:991px){
+    form span:last-child{
+        text-align: center;
+    }
+    .box.large label{
+        font-size: 15px;
+    }
+}
+.box.large .section{
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    padding: 15px;
+    text-align: center;
+    background-color: #001833;
+    width: 100%;
+    color: #fff;
+}
+.box.large .section span{
+    color: #0282ad;
+} 
+
+/* end header */
+/* start deals company */
+.deals{
+    background-color: #fff;
+    padding: 55px;
+}
+.deals .companies{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        row-gap: 50px;
+        margin-top: 60px;
+        padding-bottom: 50px;
+        justify-content: center;
+    
+}
+@media (max-width:767px){
+.deals{
+    margin: auto;
+    display: block;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+header{
+    height: 120vh;
+}
+}
+@media (max-width:567px){
+    header{
+        height: 120vh;
+    } 
+}
+.deals .companies li img{
+    width: 100px;
+    height: 60px;
+}
+/* end deals */
+/* start footer */
+footer .text{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 8px 0px 80px;
+}

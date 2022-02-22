@@ -1,0 +1,305 @@
+:root{
+    --main-color:#0068EF;
+}
+/* start header */
+header{
+    background: url("../images/sea.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+}
+/* start main container box */
+.Bundle-box{
+padding: 100px ;    
+}
+.Bundle-box .container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-around;
+    column-gap: 2%;
+}
+.Bundle-box .large-box{
+position: relative;
+background-color: #fff;
+padding: 20px ;
+}
+.Bundle-box .large-box h2{
+    font-size: 33px;
+    margin: 15px 0px;
+}
+.Bundle-box .large-box p{
+    color: #777;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+
+.Bundle-box .g1{
+    grid-area: g1;
+    position: relative;
+}
+.Bundle-box .g2{
+    grid-area: g2;
+    position: relative;
+}
+.Bundle-box .g1 input,
+.Bundle-box .g2 input{
+    width: 100%;
+    padding: 3px 0px 3px 25px;
+    height: 50px;
+}
+.Bundle-box .g1 i,
+.Bundle-box .g2 i{
+    top: 17px;
+    left: 5px;
+    color: var(--main-color);
+    position: absolute;
+}
+.Bundle-box .g3{
+    grid-area: g3;
+}
+.Bundle-box .g4{
+    grid-area: g4;
+}
+.Bundle-box .g5{
+    grid-area: g5;
+}
+.Bundle-box .grid-sys-one{
+    margin: 30px 0px;
+    display: grid;
+   grid-template-areas: 'g1 g1 g2 g2';
+   gap: 10px;
+}
+.Bundle-box .grid-sys-one+p{
+    color: var(--main-color);
+    font-weight: bold;
+}
+.Bundle-box .grid-sys-two{
+    margin: 30px 0px;
+    display: grid;
+    grid-template-areas: 'g3 g4 g5';
+    gap: 10px;
+}
+@media (max-width:991px) {
+    .Bundle-box .container{
+        grid-template-columns: 2fr 1fr;
+    }
+    .Bundle-box .grid-sys-one{
+        grid-template-areas: 'g1 '
+        'g2';
+    }
+    .Bundle-box .grid-sys-two{
+        grid-template-areas: 'g3 '
+        'g4'
+        'g5';
+        gap: 10px;
+    }
+    .Bundle-box{
+        padding: 30px 40px;
+    }
+    header{
+        height: 145vh;
+    }
+}
+
+.Bundle-box .g3 input,
+.Bundle-box .g4 input,
+.Bundle-box .g5 input{
+    width: 100%;
+    height: 50px;
+}
+.Bundle-box .g3 input,
+.Bundle-box .g4 input{
+    padding: 3px 10px;
+}
+.Bundle-box .g1 input:focus,
+.Bundle-box .g2 input:focus,
+.Bundle-box .g3 input:focus,
+.Bundle-box .g4 input:focus{
+    border: 3px solid var(--main-color);
+    outline: none;
+}
+.Bundle-box .g5 input{
+background-color: var(--main-color);
+color: #fff;
+font-weight: bold;
+border: 1px solid var(--main-color);
+}
+.Bundle-box .g5 input:hover{
+    background-color: #0f5ec7;
+    cursor: pointer;
+}
+.Bundle-box .flex-sec{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    
+}
+.Bundle-box .flex-sec div:first-of-type{
+    width: 60%;
+}
+.Bundle-box .flex-sec div:last-of-type{
+    width: 30%;
+    font-size: 14px;
+    color: #777;
+}
+.discount{
+    background-color: rgb(221, 220, 220);
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 15px;
+    text-align: center;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discount #p{
+    text-align: center;
+    margin-bottom: 0;
+    color: #333;
+    padding: 5px;
+    font-size: 16px;
+}
+.Bundle-box .small-box{
+    border: 6px solid #fff;
+    height: 340px;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.178);
+}
+.small-box .main{
+    margin-top: 25px;
+    color: #fff;
+}
+.small-box .main span:first-of-type{
+    text-decoration: underline;
+}
+.small-box .main span:last-of-type{
+font-size: 28px;
+font-weight: bolder;
+}
+.small-box p{
+    font-weight: bolder;
+    line-height: 1.8;
+}
+.small-box span+button{
+    font-weight: bold;
+    color: #ddd;
+}
+.small-box button{
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 10px;
+    width: 140px;
+    margin: auto;
+    color: #fff;
+    font-weight: bold;
+    transition: .4s;
+}
+.small-box button:hover{
+    background-color: var(--main-color);
+    cursor: pointer;
+    border-color: var(--main-color);
+}
+@media(max-width:767px){
+    .Bundle-box .container{
+        grid-template-columns: 1fr;
+    }
+ .Bundle-box .small-box{
+     display: none;
+ }   
+ .Bundle-box .flex-sec{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+ }
+ .Bundle-box .flex-sec div:first-of-type {
+     width: 100%;
+ }
+ .Bundle-box .flex-sec div:last-of-type {
+     width: 100%;
+ }
+}
+@media (max-width:1000px) {
+    header{
+        height: 170vh;
+    }
+}
+/* end header */
+
+/* start three grid */
+.three-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    padding: 100px 70px;
+    justify-content: space-around;
+}
+.three-grid .item{
+    height: 250px;
+    position: relative;
+    transition: .3s;
+}
+.three-grid .item.one{
+    background-image: url('../images/umbrella-chair-around-swimming-pool.jpg');
+    background-size: cover;
+}
+.three-grid .item.two{
+    background-image: url('../images/low-angle-shot-unique-high-rise-orange-building-touching-sky.jpg');
+    background-size: cover;
+}
+.three-grid .item.three{
+    background-image: url('../images/explore.jpg');
+
+    background-size: cover;
+}
+.three-grid .item .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  background-color:   #00000054;
+    top: 0;
+}
+.three-grid .item.three .overlay{
+    background-color:   #00000018; 
+}
+.three-grid .item h3{
+ text-align: center;
+    color: #fff;
+    line-height: 1.8;
+    margin-top: 70px;
+    padding: 19px;
+}
+.three-grid .item p{
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+.three-grid .item:hover .overlay{
+    background-color:   #0000008a;
+    cursor: pointer;
+    
+}
+.three-grid .item span{
+    display: block;
+    text-align: center;
+    margin-top: 45px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 5px ;
+    width: 130px;
+    margin:30px auto;
+    font-weight: bold;
+}
+/* end three grid */

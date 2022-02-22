@@ -1,0 +1,456 @@
+:root{
+    --main-color:#0068EF;
+}
+/* start header */
+header{
+    background: url("../images/hotel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+}
+/* start main container box */
+.hotel-box{
+padding: 100px ;    
+}
+.hotel-box .container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-around;
+    column-gap: 2%;
+}
+.hotel-box .large-box{
+position: relative;
+background-color: #fff;
+padding: 20px ;
+}
+.hotel-box .large-box h2{
+    font-size: 33px;
+    margin: 15px 0px;
+}
+.hotel-box .large-box p{
+    color: #777;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.hotel-box .radio label{
+    margin-right: 15px;
+    font-weight: lighter;
+    color: #777;
+}
+.hotel-box .g1{
+    grid-area: g1;
+    position: relative;
+}
+.hotel-box .g2{
+    grid-area: g2;
+    position: relative;
+}
+.hotel-box .g1 input,
+.hotel-box .g2 input{
+    width: 100%;
+    padding: 3px 0px 3px 25px;
+    height: 50px;
+}
+.hotel-box .g1 i,
+.hotel-box .g2 i{
+    top: 17px;
+    left: 5px;
+    color: var(--main-color);
+    position: absolute;
+}
+.hotel-box.g3{
+    grid-area: g3;
+}
+.hotel-box .g4{
+    grid-area: g4;
+}
+.hotel-box .g5{
+    grid-area: g5;
+}
+.hotel-box .grid-sys-one{
+    margin: 30px 0px;
+    display: grid;
+   grid-template-areas: 'g1 g2 g3 g4';
+   gap: 10px;
+}
+
+
+@media (max-width:991px) {
+    .hotel-box .container{
+        grid-template-columns: 2fr 1fr;
+    }
+    .hotel-box .grid-sys-one{
+        grid-template-areas: 'g1 '
+        'g2'
+        'g3'
+        'g4';
+    }
+
+    .hotel-box{
+        padding: 30px 40px;
+    }
+    header{
+        height: 145vh;
+    }
+}
+
+.hotel-box .g1 input,
+.hotel-box .g2 input,
+.hotel-box .g3 input,
+.hotel-box .g4 input{
+    width: 100%;
+    height: 50px;
+}
+.hotel-box .g1 input{
+    padding: 3px 0 3px 25px;
+}
+
+.hotel-box .g2 input,
+.hotel-box .g3 input{
+    padding: 3px 10px;
+}
+.hotel-box .g1 input:focus,
+.hotel-box .g2 input:focus,
+.hotel-box .g3 input:focus{
+    border: 3px solid var(--main-color);
+    outline: none;
+}
+.hotel-box .g4 input{
+background-color: var(--main-color);
+color: #fff;
+font-weight: bold;
+border: 1px solid var(--main-color);
+}
+.hotel-box .g4 input:hover{
+    background-color: #0f5ec7;
+    cursor: pointer;
+}
+.hotel-box .flex-sec{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    align-items: center;
+    
+}
+.hotel-box .flex-sec div:first-of-type{
+    width: 65%;
+}
+.hotel-box .flex-sec div:last-of-type{
+    width: 20%;
+    font-size: 14px;
+    color: #777;
+}
+ .green-back{
+    background-color: #D0F1AC;
+    padding: 7px ;
+    font-size: 13px;
+    border-radius: 4px;
+    color: #777;
+}
+.green-back span{
+margin-right: 10px;
+}
+.green-back span:first-of-type{
+    color: green;
+    font-weight: bold;
+}
+ .green-back i{
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    padding: 2px 4px;
+    margin: 0px 3px;
+    border-radius: 50%;
+    color: #fafafa;
+background-color: #017000;
+} 
+.discount{
+    background-color: rgb(221, 220, 220);
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 15px;
+    text-align: center;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discount #p{
+    text-align: center;
+    margin-bottom: 0;
+    color: var(--main-color);
+    padding: 5px;
+    font-size: 16px;
+}
+.hotel-box .small-box{
+    border: 8px solid #fff;
+    height: 340px;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    background-color: #6907C1;
+}
+.small-box .main span{
+font-family: fantasy,Arial, Helvetica, sans-serif;
+font-size: 28px;
+}
+
+.small-box p{
+    font-weight: bolder;
+    line-height: 1.8;
+    font-size: 28px;
+}
+.small-box span+button{
+    font-weight: bold;
+    color: #ddd;
+}
+.small-box button{
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 10px;
+    width: 140px;
+    margin: auto;
+    color: #fff;
+    font-weight: bold;
+    transition: .4s;
+}
+.small-box button:hover{
+    background-color: #fff;
+    cursor: pointer;
+    border-color: #fff;
+    color: #6907C1;
+}
+@media(max-width:767px){
+    .hotel-box .container{
+        grid-template-columns: 1fr;
+    }
+ .hotel-box  .small-box{
+     display: none;
+ }   
+ .hotel-box .flex-sec{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+ }
+ .hotel-box .flex-sec div:first-of-type {
+     width: 100%;
+ }
+ .hotel-box .flex-sec div:last-of-type {
+     width: 100%;
+ }
+}
+@media (max-width:1000px) {
+    header{
+        height: 170vh;
+    }
+}
+/* end header */
+.third-section .box.first{
+border-bottom: none;
+}
+
+/* start three grid */
+.three-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    padding: 100px 70px;
+    justify-content: space-around;
+}
+.three-grid .item{
+    height: 250px;
+    position: relative;
+    transition: .3s;
+}
+
+.three-grid .item.one{
+    background-image: url('../images/sky.jpg');
+    background-size: cover;
+}
+.three-grid .item.two{
+    background-image: url('../images/place-flying-sunset-sky.jpg');
+    background-size: cover;
+}
+.three-grid .item.three{
+    background-image: url('../images/saveMony.jpg');
+    background-size: cover;
+}
+.three-grid .item .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  background-color:   #00000040;
+    top: 0;
+}
+.three-grid .item h3{
+ text-align: center;
+    color: #fff;
+    line-height: 1.8;
+    margin-top: 70px;
+    padding: 19px;
+}
+.three-grid .item p{
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+.three-grid .item:hover .overlay{
+    background-color:   #00000085;
+    cursor: pointer;
+    
+}
+.three-grid .item span{
+    display: block;
+    text-align: center;
+    margin-top: 45px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* end three grid */
+/* start hotel deals */
+.hotel-deals{
+    padding: 40px 30px;
+    border-bottom: 1px solid #ccc;
+    margin: auto;
+}
+.hotel-deals h3{
+    padding: 10px 0 30px 40px;
+    font-size: 30px;
+}
+.hotel-deals .container{
+    display: grid;
+    width: 94%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotel-deals .card{
+    display: grid;
+    border: 1px solid #eee;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding-bottom: 10px;
+}
+.hotel-deals .card .pic{
+    width: 100%;
+    height: 200px;
+}
+.hotel-deals .card .pic img{
+    max-width: 100%;
+}
+.hotel-deals .card .text {
+    padding: 10px;
+}
+.hotel-deals .card .text span a{
+    color: #777;
+    display: block;
+    padding-bottom: 10px;
+}
+.hotel-deals .card .text .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hotel-deals .card .text .flex p{
+font-weight: bold;
+font-size: 25px;
+}
+.hotel-deals .card .text .flex h3{
+    font-weight: bold;
+    font-size: 27px;
+    color: green;
+    }
+    /* end hote deals */
+    /* start save up */
+    .saveup{
+        width: 88%;
+        margin:60px auto;
+        padding: 40px 70px;
+        text-align: center;
+        box-shadow: 0 0 10px #ddd;
+    }
+    .saveup h2{
+        color: #333;
+        font-size: 30px;
+        margin: 20px 0;
+    }
+    .saveup p{
+        color: rgb(124, 124, 124);
+        font-size: 17px;
+        line-height: 1.7;
+        margin: 20px 0;
+    }
+    .saveup button{
+        color: var(--main-color);
+        border: 2px solid var(--main-color);
+        padding: 15px 20px;
+        font-weight: bold;
+        background-color: #fff;
+        transition: .4s;
+    }
+    .saveup button:hover{
+        color: #fff;
+        cursor: pointer;
+        background-color: var(--main-color);
+    }
+    /* end save up */
+    /* start top-hotel */
+    .top-deals{
+        padding: 20px ;
+    }
+    .top-deals h2{
+        font-size: 26px;
+        margin: 20px 0;
+        padding-left: 20px;
+    }
+    .top-deals .container{
+        width: 98%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+        gap: 20px;
+        padding: 20px ;
+        justify-content: space-around;
+    }
+    @media (max-width:1000px) {
+        .top-deals .container{
+            width: 98%;
+            grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+            gap: 10px;
+        }
+    }
+    @media (max-width:767px) {
+        .top-deals .container{
+            width: 99%;
+            grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+            gap: 8px;
+        }
+    }
+
+    .top-deals .container .box li{
+        padding: 7px 0;
+    }
+    .top-deals .container .box li a{
+        color: var(--main-color)
+    }
+    .top-deals .container .box li:hover a{
+        color: #6907C1;
+        text-decoration: underline;
+    }
+/* end top  */
+.google{
+    border-top: 1px solid #ccc;
+}
